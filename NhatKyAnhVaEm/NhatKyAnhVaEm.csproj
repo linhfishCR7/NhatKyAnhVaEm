@@ -1,0 +1,1391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB99BBB0-40A8-49AD-AA2E-9541401FB435}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NhatKyAnhVaEm</RootNamespace>
+    <AssemblyName>NhatKyAnhVaEm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\..\..\..\..\..\..\PMCDB\PMCDB\bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder, Version=2.6.0.2792, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BIG_POJECTS\Study4U\Study4U\ckfinder\bin\Debug\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\flaticon.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\gijgo.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\magnific-popup.css" />
+    <Content Include="Content\css\nice-select.css" />
+    <Content Include="Content\css\owl.carousel.min.css" />
+    <Content Include="Content\css\slick.css" />
+    <Content Include="Content\css\slicknav.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\theme-default.css" />
+    <Content Include="Content\css\themify-icons.css" />
+    <Content Include="Content\fonts\fa-brands-400.svg" />
+    <Content Include="Content\fonts\fa-regular-400.svg" />
+    <Content Include="Content\fonts\fa-solid-900.svg" />
+    <Content Include="Content\fonts\flaticon.css" />
+    <Content Include="Content\fonts\Flaticon.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\gijgo-material.svg" />
+    <Content Include="Content\fonts\themify.svg" />
+    <Content Include="Content\js\ajax-form.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\contact.js" />
+    <Content Include="Content\js\gijgo.min.js" />
+    <Content Include="Content\js\imagesloaded.pkgd.min.js" />
+    <Content Include="Content\js\isotope.pkgd.min.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.ajaxchimp.min.js" />
+    <Content Include="Content\js\jquery.counterup.min.js" />
+    <Content Include="Content\js\jquery.form.js" />
+    <Content Include="Content\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\js\jquery.scrollUp.min.js" />
+    <Content Include="Content\js\jquery.slicknav.min.js" />
+    <Content Include="Content\js\jquery.validate.min.js" />
+    <Content Include="Content\js\mail-script.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\nice-select.min.js" />
+    <Content Include="Content\js\owl.carousel.min.js" />
+    <Content Include="Content\js\plugins.js" />
+    <Content Include="Content\js\popper.min.js" />
+    <Content Include="Content\js\range.js" />
+    <Content Include="Content\js\scrollIt.js" />
+    <Content Include="Content\js\slick.min.js" />
+    <Content Include="Content\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="Content\js\vendor\modernizr-3.5.0.min.js" />
+    <Content Include="Content\js\waypoints.min.js" />
+    <Content Include="Content\js\wow.min.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\css\style.map" />
+    <Content Include="Content\css\theme-default.map" />
+    <Content Include="Content\fonts\fa-brands-400.eot" />
+    <Content Include="Content\fonts\fa-brands-400.ttf" />
+    <Content Include="Content\fonts\fa-brands-400.woff" />
+    <Content Include="Content\fonts\fa-brands-400.woff2" />
+    <Content Include="Content\fonts\fa-regular-400.eot" />
+    <Content Include="Content\fonts\fa-regular-400.ttf" />
+    <Content Include="Content\fonts\fa-regular-400.woff" />
+    <Content Include="Content\fonts\fa-regular-400.woff2" />
+    <Content Include="Content\fonts\fa-solid-900.eot" />
+    <Content Include="Content\fonts\fa-solid-900.ttf" />
+    <Content Include="Content\fonts\fa-solid-900.woff" />
+    <Content Include="Content\fonts\fa-solid-900.woff2" />
+    <Content Include="Content\fonts\Flaticon.eot" />
+    <Content Include="Content\fonts\Flaticon.ttf" />
+    <Content Include="Content\fonts\Flaticon.woff" />
+    <Content Include="Content\fonts\Flaticon.woff2" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\gijgo-material.eot" />
+    <Content Include="Content\fonts\gijgo-material.ttf" />
+    <Content Include="Content\fonts\gijgo-material.woff" />
+    <Content Include="Content\fonts\themify.eot" />
+    <Content Include="Content\fonts\themify.ttf" />
+    <Content Include="Content\fonts\themify.woff" />
+    <Content Include="Content\scss\style.scss" />
+    <Content Include="Content\scss\theme-default.scss" />
+    <Content Include="Content\scss\_about.scss" />
+    <Content Include="Content\scss\_blog.scss" />
+    <Content Include="Content\scss\_blog_part.scss" />
+    <Content Include="Content\scss\_bradcam.scss" />
+    <Content Include="Content\scss\_btn.scss" />
+    <Content Include="Content\scss\_contact.scss" />
+    <Content Include="Content\scss\_contact_action.scss" />
+    <Content Include="Content\scss\_counter.scss" />
+    <Content Include="Content\scss\_destination.scss" />
+    <Content Include="Content\scss\_elements.scss" />
+    <Content Include="Content\scss\_extend.scss" />
+    <Content Include="Content\scss\_footer.scss" />
+    <Content Include="Content\scss\_header.scss" />
+    <Content Include="Content\scss\_mixins.scss" />
+    <Content Include="Content\scss\_newsletter.scss" />
+    <Content Include="Content\scss\_offers.scss" />
+    <Content Include="Content\scss\_popular_place.scss" />
+    <Content Include="Content\scss\_responsive.scss" />
+    <Content Include="Content\scss\_section_title.scss" />
+    <Content Include="Content\scss\_service.scss" />
+    <Content Include="Content\scss\_slick-nav.scss" />
+    <Content Include="Content\scss\_slider.scss" />
+    <Content Include="Content\scss\_team.scss" />
+    <Content Include="Content\scss\_testmonial.scss" />
+    <Content Include="Content\scss\_travel_variation.scss" />
+    <Content Include="Content\scss\_varriable.scss" />
+    <Content Include="Content\scss\_video.scss" />
+    <Content Include="Content\scss\_where_to_go.scss" />
+    <None Include="Properties\PublishProfiles\nhatkyanhvaem.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Temples\ckeditor\adapters\jquery.js" />
+    <Content Include="Temples\ckeditor\build-config.js" />
+    <Content Include="Temples\ckeditor\ckeditor.js" />
+    <Content Include="Temples\ckeditor\config.js" />
+    <Content Include="Temples\ckeditor\contents.css" />
+    <Content Include="Temples\ckeditor\lang\af.js" />
+    <Content Include="Temples\ckeditor\lang\ar.js" />
+    <Content Include="Temples\ckeditor\lang\az.js" />
+    <Content Include="Temples\ckeditor\lang\bg.js" />
+    <Content Include="Temples\ckeditor\lang\bn.js" />
+    <Content Include="Temples\ckeditor\lang\bs.js" />
+    <Content Include="Temples\ckeditor\lang\ca.js" />
+    <Content Include="Temples\ckeditor\lang\cs.js" />
+    <Content Include="Temples\ckeditor\lang\cy.js" />
+    <Content Include="Temples\ckeditor\lang\da.js" />
+    <Content Include="Temples\ckeditor\lang\de-ch.js" />
+    <Content Include="Temples\ckeditor\lang\de.js" />
+    <Content Include="Temples\ckeditor\lang\el.js" />
+    <Content Include="Temples\ckeditor\lang\en-au.js" />
+    <Content Include="Temples\ckeditor\lang\en-ca.js" />
+    <Content Include="Temples\ckeditor\lang\en-gb.js" />
+    <Content Include="Temples\ckeditor\lang\en.js" />
+    <Content Include="Temples\ckeditor\lang\eo.js" />
+    <Content Include="Temples\ckeditor\lang\es-mx.js" />
+    <Content Include="Temples\ckeditor\lang\es.js" />
+    <Content Include="Temples\ckeditor\lang\et.js" />
+    <Content Include="Temples\ckeditor\lang\eu.js" />
+    <Content Include="Temples\ckeditor\lang\fa.js" />
+    <Content Include="Temples\ckeditor\lang\fi.js" />
+    <Content Include="Temples\ckeditor\lang\fo.js" />
+    <Content Include="Temples\ckeditor\lang\fr-ca.js" />
+    <Content Include="Temples\ckeditor\lang\fr.js" />
+    <Content Include="Temples\ckeditor\lang\gl.js" />
+    <Content Include="Temples\ckeditor\lang\gu.js" />
+    <Content Include="Temples\ckeditor\lang\he.js" />
+    <Content Include="Temples\ckeditor\lang\hi.js" />
+    <Content Include="Temples\ckeditor\lang\hr.js" />
+    <Content Include="Temples\ckeditor\lang\hu.js" />
+    <Content Include="Temples\ckeditor\lang\id.js" />
+    <Content Include="Temples\ckeditor\lang\is.js" />
+    <Content Include="Temples\ckeditor\lang\it.js" />
+    <Content Include="Temples\ckeditor\lang\ja.js" />
+    <Content Include="Temples\ckeditor\lang\ka.js" />
+    <Content Include="Temples\ckeditor\lang\km.js" />
+    <Content Include="Temples\ckeditor\lang\ko.js" />
+    <Content Include="Temples\ckeditor\lang\ku.js" />
+    <Content Include="Temples\ckeditor\lang\lt.js" />
+    <Content Include="Temples\ckeditor\lang\lv.js" />
+    <Content Include="Temples\ckeditor\lang\mk.js" />
+    <Content Include="Temples\ckeditor\lang\mn.js" />
+    <Content Include="Temples\ckeditor\lang\ms.js" />
+    <Content Include="Temples\ckeditor\lang\nb.js" />
+    <Content Include="Temples\ckeditor\lang\nl.js" />
+    <Content Include="Temples\ckeditor\lang\no.js" />
+    <Content Include="Temples\ckeditor\lang\oc.js" />
+    <Content Include="Temples\ckeditor\lang\pl.js" />
+    <Content Include="Temples\ckeditor\lang\pt-br.js" />
+    <Content Include="Temples\ckeditor\lang\pt.js" />
+    <Content Include="Temples\ckeditor\lang\ro.js" />
+    <Content Include="Temples\ckeditor\lang\ru.js" />
+    <Content Include="Temples\ckeditor\lang\si.js" />
+    <Content Include="Temples\ckeditor\lang\sk.js" />
+    <Content Include="Temples\ckeditor\lang\sl.js" />
+    <Content Include="Temples\ckeditor\lang\sq.js" />
+    <Content Include="Temples\ckeditor\lang\sr-latn.js" />
+    <Content Include="Temples\ckeditor\lang\sr.js" />
+    <Content Include="Temples\ckeditor\lang\sv.js" />
+    <Content Include="Temples\ckeditor\lang\th.js" />
+    <Content Include="Temples\ckeditor\lang\tr.js" />
+    <Content Include="Temples\ckeditor\lang\tt.js" />
+    <Content Include="Temples\ckeditor\lang\ug.js" />
+    <Content Include="Temples\ckeditor\lang\uk.js" />
+    <Content Include="Temples\ckeditor\lang\vi.js" />
+    <Content Include="Temples\ckeditor\lang\zh-cn.js" />
+    <Content Include="Temples\ckeditor\lang\zh.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\az.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\es-mx.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\oc.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Temples\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Temples\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Temples\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Temples\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Temples\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Temples\ckeditor\plugins\icons.png" />
+    <Content Include="Temples\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Temples\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Temples\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Temples\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Temples\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Temples\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Temples\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Temples\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Temples\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Temples\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Temples\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Temples\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Temples\ckeditor\plugins\scayt\dialogs\dialog.css" />
+    <Content Include="Temples\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Temples\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Temples\ckeditor\plugins\scayt\skins\moono-lisa\scayt.css" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\az.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\en-au.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\en-ca.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\es-mx.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\oc.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Temples\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Temples\ckeditor\plugins\tableselection\styles\tableselection.css" />
+    <Content Include="Temples\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Temples\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadimage\plugin.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\dev\cors.html" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\dev\filereaderplugin.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\dev\upload.html" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\az.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\ca.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\cs.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\da.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\de-ch.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\de.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\el.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\en.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\eo.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\es-mx.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\es.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\eu.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\fr.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\gl.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\hr.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\hu.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\id.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\it.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\ja.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\km.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\ko.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\ku.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\nb.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\nl.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\no.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\oc.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\pl.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\pt-br.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\pt.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\ru.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\sk.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\sv.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\tr.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\ug.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\uk.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\zh-cn.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\lang\zh.js" />
+    <Content Include="Temples\ckeditor\plugins\uploadwidget\plugin.js" />
+    <Content Include="Temples\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Temples\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Temples\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Temples\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Temples\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Temples\ckeditor\plugins\wsc\skins\moono-lisa\wsc.css" />
+    <Content Include="Temples\ckeditor\samples\css\samples.css" />
+    <Content Include="Temples\ckeditor\samples\img\github-top.png" />
+    <Content Include="Temples\ckeditor\samples\img\header-bg.png" />
+    <Content Include="Temples\ckeditor\samples\img\header-separator.png" />
+    <Content Include="Temples\ckeditor\samples\img\logo.png" />
+    <Content Include="Temples\ckeditor\samples\img\navigation-tip.png" />
+    <Content Include="Temples\ckeditor\samples\index.html" />
+    <Content Include="Temples\ckeditor\samples\js\sample.js" />
+    <Content Include="Temples\ckeditor\samples\js\sf.js" />
+    <Content Include="Temples\ckeditor\samples\old\ajax.html" />
+    <Content Include="Temples\ckeditor\samples\old\api.html" />
+    <Content Include="Temples\ckeditor\samples\old\appendto.html" />
+    <Content Include="Temples\ckeditor\samples\old\assets\inlineall\logo.png" />
+    <Content Include="Temples\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Temples\ckeditor\samples\old\assets\sample.jpg" />
+    <Content Include="Temples\ckeditor\samples\old\assets\uilanguages\languages.js" />
+    <Content Include="Temples\ckeditor\samples\old\datafiltering.html" />
+    <Content Include="Temples\ckeditor\samples\old\dialog\assets\my_dialog.js" />
+    <Content Include="Temples\ckeditor\samples\old\dialog\dialog.html" />
+    <Content Include="Temples\ckeditor\samples\old\divreplace.html" />
+    <Content Include="Temples\ckeditor\samples\old\enterkey\enterkey.html" />
+    <Content Include="Temples\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="Temples\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="Temples\ckeditor\samples\old\htmlwriter\outputforflash.html" />
+    <Content Include="Temples\ckeditor\samples\old\htmlwriter\outputhtml.html" />
+    <Content Include="Temples\ckeditor\samples\old\index.html" />
+    <Content Include="Temples\ckeditor\samples\old\inlineall.html" />
+    <Content Include="Temples\ckeditor\samples\old\inlinebycode.html" />
+    <Content Include="Temples\ckeditor\samples\old\inlinetextarea.html" />
+    <Content Include="Temples\ckeditor\samples\old\jquery.html" />
+    <Content Include="Temples\ckeditor\samples\old\magicline\magicline.html" />
+    <Content Include="Temples\ckeditor\samples\old\readonly.html" />
+    <Content Include="Temples\ckeditor\samples\old\replacebyclass.html" />
+    <Content Include="Temples\ckeditor\samples\old\replacebycode.html" />
+    <Content Include="Temples\ckeditor\samples\old\sample.css" />
+    <Content Include="Temples\ckeditor\samples\old\sample.js" />
+    <Content Include="Temples\ckeditor\samples\old\tabindex.html" />
+    <Content Include="Temples\ckeditor\samples\old\toolbar\toolbar.html" />
+    <Content Include="Temples\ckeditor\samples\old\uicolor.html" />
+    <Content Include="Temples\ckeditor\samples\old\uilanguages.html" />
+    <Content Include="Temples\ckeditor\samples\old\wysiwygarea\fullpage.html" />
+    <Content Include="Temples\ckeditor\samples\old\xhtmlstyle.html" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\css\fontello.css" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\font\fontello.svg" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\index.html" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\dialog.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\dialog_ie.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\dialog_ie8.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\dialog_iequirks.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\editor.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\editor_gecko.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\editor_ie.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\editor_ie8.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\editor_iequirks.css" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\icons.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\icons_hidpi.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\arrow.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\close.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\hidpi\close.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\hidpi\lock-open.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\hidpi\lock.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\hidpi\refresh.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\lock-open.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\lock.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\refresh.png" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\images\spinner.gif" />
+    <Content Include="Temples\ckeditor\styles.js" />
+    <Content Include="Temples\ckfinder\bin\Debug\CKFinder.dll" />
+    <Content Include="Temples\ckfinder\bin\Debug\CKFinder.pdb" />
+    <Content Include="Temples\ckfinder\bin\Debug\CKFinder_FileEditor.dll" />
+    <Content Include="Temples\ckfinder\bin\Debug\CKFinder_FileEditor.pdb" />
+    <Content Include="Temples\ckfinder\bin\Debug\CKFinder_ImageResize.dll" />
+    <Content Include="Temples\ckfinder\bin\Debug\CKFinder_ImageResize.pdb" />
+    <Content Include="Temples\ckfinder\bin\Debug\CKFinder_Watermark.dll" />
+    <Content Include="Temples\ckfinder\bin\Debug\CKFinder_Watermark.pdb" />
+    <Content Include="Temples\ckfinder\bin\Release\CKFinder.dll" />
+    <Content Include="Temples\ckfinder\bin\Release\CKFinder_FileEditor.dll" />
+    <Content Include="Temples\ckfinder\bin\Release\CKFinder_FileEditor.pdb" />
+    <Content Include="Temples\ckfinder\bin\Release\CKFinder_ImageResize.dll" />
+    <Content Include="Temples\ckfinder\bin\Release\CKFinder_ImageResize.pdb" />
+    <Content Include="Temples\ckfinder\bin\Release\CKFinder_Watermark.dll" />
+    <Content Include="Temples\ckfinder\bin\Release\CKFinder_Watermark.pdb" />
+    <Content Include="Temples\ckfinder\changelog.txt" />
+    <Content Include="Temples\ckfinder\ckfinder.html" />
+    <Content Include="Temples\ckfinder\ckfinder.js" />
+    <Content Include="Temples\ckfinder\ckfinder_v1.js" />
+    <Content Include="Temples\ckfinder\config.ascx" />
+    <Content Include="Temples\ckfinder\config.js" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\connector.aspx" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\bg.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\ca.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\cs.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\cy.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\da.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\de.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\el.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\en.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\eo.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\es-mx.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\es.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\et.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\fa.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\fi.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\fr.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\gu.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\he.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\hi.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\hr.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\hu.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\it.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\ja.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\lt.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\lv.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\nb.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\nl.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\nn.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\no.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\pl.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\pt-br.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\ro.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\ru.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\sk.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\sl.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\sr.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\sv.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\tr.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\vi.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\zh-cn.xml" />
+    <Content Include="Temples\ckfinder\core\connector\aspx\lang\zh-tw.xml" />
+    <Content Include="Temples\ckfinder\help\cs\files\001.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\002.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\003.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\004.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\005.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\006.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\007.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\008.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\009.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\010.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\011.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\012.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\013.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\014.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\015.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\header.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\license.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\suggestions.html" />
+    <Content Include="Temples\ckfinder\help\cs\files\toc.html" />
+    <Content Include="Temples\ckfinder\help\cs\index.html" />
+    <Content Include="Temples\ckfinder\help\en\files\001.html" />
+    <Content Include="Temples\ckfinder\help\en\files\002.html" />
+    <Content Include="Temples\ckfinder\help\en\files\003.html" />
+    <Content Include="Temples\ckfinder\help\en\files\004.html" />
+    <Content Include="Temples\ckfinder\help\en\files\005.html" />
+    <Content Include="Temples\ckfinder\help\en\files\006.html" />
+    <Content Include="Temples\ckfinder\help\en\files\007.html" />
+    <Content Include="Temples\ckfinder\help\en\files\008.html" />
+    <Content Include="Temples\ckfinder\help\en\files\009.html" />
+    <Content Include="Temples\ckfinder\help\en\files\010.html" />
+    <Content Include="Temples\ckfinder\help\en\files\011.html" />
+    <Content Include="Temples\ckfinder\help\en\files\012.html" />
+    <Content Include="Temples\ckfinder\help\en\files\013.html" />
+    <Content Include="Temples\ckfinder\help\en\files\014.html" />
+    <Content Include="Temples\ckfinder\help\en\files\015.html" />
+    <Content Include="Temples\ckfinder\help\en\files\header.html" />
+    <Content Include="Temples\ckfinder\help\en\files\license.html" />
+    <Content Include="Temples\ckfinder\help\en\files\suggestions.html" />
+    <Content Include="Temples\ckfinder\help\en\files\toc.html" />
+    <Content Include="Temples\ckfinder\help\en\index.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\001.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\002.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\003.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\004.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\005.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\006.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\007.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\008.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\009.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\010.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\011.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\012.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\013.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\header.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\001.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\002.gif" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\003.gif" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\004.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\005.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\006.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\007.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\008.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\009.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\010.gif" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\011.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\012.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\013.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\014.gif" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\015.gif" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\016.gif" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\017.gif" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\018.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\019.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\images\020.png" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\license.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\suggestions.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\files\toc.html" />
+    <Content Include="Temples\ckfinder\help\es-mx\index.html" />
+    <Content Include="Temples\ckfinder\help\es\files\001.html" />
+    <Content Include="Temples\ckfinder\help\es\files\002.html" />
+    <Content Include="Temples\ckfinder\help\es\files\003.html" />
+    <Content Include="Temples\ckfinder\help\es\files\004.html" />
+    <Content Include="Temples\ckfinder\help\es\files\005.html" />
+    <Content Include="Temples\ckfinder\help\es\files\006.html" />
+    <Content Include="Temples\ckfinder\help\es\files\007.html" />
+    <Content Include="Temples\ckfinder\help\es\files\008.html" />
+    <Content Include="Temples\ckfinder\help\es\files\009.html" />
+    <Content Include="Temples\ckfinder\help\es\files\010.html" />
+    <Content Include="Temples\ckfinder\help\es\files\011.html" />
+    <Content Include="Temples\ckfinder\help\es\files\012.html" />
+    <Content Include="Temples\ckfinder\help\es\files\013.html" />
+    <Content Include="Temples\ckfinder\help\es\files\header.html" />
+    <Content Include="Temples\ckfinder\help\es\files\images\001.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\002.gif" />
+    <Content Include="Temples\ckfinder\help\es\files\images\003.gif" />
+    <Content Include="Temples\ckfinder\help\es\files\images\004.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\005.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\006.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\007.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\008.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\009.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\010.gif" />
+    <Content Include="Temples\ckfinder\help\es\files\images\011.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\012.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\013.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\014.gif" />
+    <Content Include="Temples\ckfinder\help\es\files\images\015.gif" />
+    <Content Include="Temples\ckfinder\help\es\files\images\016.gif" />
+    <Content Include="Temples\ckfinder\help\es\files\images\017.gif" />
+    <Content Include="Temples\ckfinder\help\es\files\images\018.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\019.png" />
+    <Content Include="Temples\ckfinder\help\es\files\images\020.png" />
+    <Content Include="Temples\ckfinder\help\es\files\license.html" />
+    <Content Include="Temples\ckfinder\help\es\files\suggestions.html" />
+    <Content Include="Temples\ckfinder\help\es\files\toc.html" />
+    <Content Include="Temples\ckfinder\help\es\index.html" />
+    <Content Include="Temples\ckfinder\help\files\images\002.gif" />
+    <Content Include="Temples\ckfinder\help\files\images\003.gif" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_basket_clear.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_basket_drag.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_basket_empty.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_basket_file_menu.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_basket_remove.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_already_exists.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_copied.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_delete.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_display_01.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_display_02.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_display_03.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_display_04.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_drag_copy.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_drag_move.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_menu.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_moved.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_pane.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_rename.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_resize.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_resize_both.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_resize_new.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_resize_overwrite.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_resize_resized.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_resize_thumbnails.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_select_hovered.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_select_selected.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_select_unselected.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_view_list.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_file_view_thumbnails.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_collapse.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_copied_from_basket.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_delete.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_expand.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_loading.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_menu.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_moved_from_basket.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_new.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_pane.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_rename.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_folder_select.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_interface.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_menu_arrow.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_menu_arrows.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_resize_lock.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_resize_reset.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_resize_unlock.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_settings.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_status_empty.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_status_file.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_status_folder.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_toolbar.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_toolbar_help.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_toolbar_refresh.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_upload_01.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_upload_03.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_upload_04.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_upload_09.png" />
+    <Content Include="Temples\ckfinder\help\files\images\CKFinder_upload_10.png" />
+    <Content Include="Temples\ckfinder\help\files\other\help.css" />
+    <Content Include="Temples\ckfinder\help\files\other\help.js" />
+    <Content Include="Temples\ckfinder\help\fi\files\001.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\002.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\003.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\004.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\005.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\006.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\007.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\008.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\009.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\010.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\011.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\012.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\013.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\header.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\001.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\002.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\003.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\004.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\005.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\006.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\007.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\008.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\009.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\010.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\011.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\012.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\013.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\014.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\015.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\016.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\017.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\018.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\019.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\images\020.gif" />
+    <Content Include="Temples\ckfinder\help\fi\files\license.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\suggestions.html" />
+    <Content Include="Temples\ckfinder\help\fi\files\toc.html" />
+    <Content Include="Temples\ckfinder\help\fi\index.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\001.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\002.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\003.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\004.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\005.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\006.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\007.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\008.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\009.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\010.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\011.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\012.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\013.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\header.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\001.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\002.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\003.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\004.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\005.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\006.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\007.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\008.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\009.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\010.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\011.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\012.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\013.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\014.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\015.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\016.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\017.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\018.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\019.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\images\020.gif" />
+    <Content Include="Temples\ckfinder\help\lt\files\license.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\suggestions.html" />
+    <Content Include="Temples\ckfinder\help\lt\files\toc.html" />
+    <Content Include="Temples\ckfinder\help\lt\index.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\001.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\002.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\003.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\004.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\005.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\006.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\007.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\008.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\009.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\010.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\011.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\012.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\013.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\014.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\015.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\header.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\license.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\suggestions.html" />
+    <Content Include="Temples\ckfinder\help\pl\files\toc.html" />
+    <Content Include="Temples\ckfinder\help\pl\index.html" />
+    <Content Include="Temples\ckfinder\install.txt" />
+    <Content Include="Temples\ckfinder\lang\bg.js" />
+    <Content Include="Temples\ckfinder\lang\ca.js" />
+    <Content Include="Temples\ckfinder\lang\cs.js" />
+    <Content Include="Temples\ckfinder\lang\cy.js" />
+    <Content Include="Temples\ckfinder\lang\da.js" />
+    <Content Include="Temples\ckfinder\lang\de.js" />
+    <Content Include="Temples\ckfinder\lang\el.js" />
+    <Content Include="Temples\ckfinder\lang\en.js" />
+    <Content Include="Temples\ckfinder\lang\eo.js" />
+    <Content Include="Temples\ckfinder\lang\es-mx.js" />
+    <Content Include="Temples\ckfinder\lang\es.js" />
+    <Content Include="Temples\ckfinder\lang\et.js" />
+    <Content Include="Temples\ckfinder\lang\fa.js" />
+    <Content Include="Temples\ckfinder\lang\fi.js" />
+    <Content Include="Temples\ckfinder\lang\fr.js" />
+    <Content Include="Temples\ckfinder\lang\gu.js" />
+    <Content Include="Temples\ckfinder\lang\he.js" />
+    <Content Include="Temples\ckfinder\lang\hi.js" />
+    <Content Include="Temples\ckfinder\lang\hr.js" />
+    <Content Include="Temples\ckfinder\lang\hu.js" />
+    <Content Include="Temples\ckfinder\lang\it.js" />
+    <Content Include="Temples\ckfinder\lang\ja.js" />
+    <Content Include="Temples\ckfinder\lang\lt.js" />
+    <Content Include="Temples\ckfinder\lang\lv.js" />
+    <Content Include="Temples\ckfinder\lang\nb.js" />
+    <Content Include="Temples\ckfinder\lang\nl.js" />
+    <Content Include="Temples\ckfinder\lang\nn.js" />
+    <Content Include="Temples\ckfinder\lang\no.js" />
+    <Content Include="Temples\ckfinder\lang\pl.js" />
+    <Content Include="Temples\ckfinder\lang\pt-br.js" />
+    <Content Include="Temples\ckfinder\lang\ro.js" />
+    <Content Include="Temples\ckfinder\lang\ru.js" />
+    <Content Include="Temples\ckfinder\lang\sk.js" />
+    <Content Include="Temples\ckfinder\lang\sl.js" />
+    <Content Include="Temples\ckfinder\lang\sr.js" />
+    <Content Include="Temples\ckfinder\lang\sv.js" />
+    <Content Include="Temples\ckfinder\lang\tr.js" />
+    <Content Include="Temples\ckfinder\lang\vi.js" />
+    <Content Include="Temples\ckfinder\lang\zh-cn.js" />
+    <Content Include="Temples\ckfinder\lang\zh-tw.js" />
+    <Content Include="Temples\ckfinder\lang\_translationstatus.txt" />
+    <Content Include="Temples\ckfinder\license.txt" />
+    <Content Include="Temples\ckfinder\plugins\dummy\lang\en.js" />
+    <Content Include="Temples\ckfinder\plugins\dummy\lang\pl.js" />
+    <Content Include="Temples\ckfinder\plugins\dummy\plugin.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\addon\mode\overlay.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\lib\codemirror.css" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\lib\codemirror.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\clike\clike.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\css\css.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\javascript\javascript.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\markdown\markdown.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\perl\perl.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\python\python.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\rst\rst.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\ruby\ruby.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\sass\sass.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\sql\sql.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\stex\stex.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\mode\xml\xml.js" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\plugin.js" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\colorbox.css" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\border.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\controls.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomCenter.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomLeft.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomRight.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\ie6\borderMiddleLeft.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\ie6\borderMiddleRight.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopCenter.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopLeft.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopRight.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\loading.gif" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\loading_background.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\images\overlay.png" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\jquery.colorbox-min.js" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\jquery.min.js" />
+    <Content Include="Temples\ckfinder\plugins\gallery\colorbox\license.txt" />
+    <Content Include="Temples\ckfinder\plugins\imageresize\images\mini.gif" />
+    <Content Include="Temples\ckfinder\plugins\imageresize\plugin.js" />
+    <Content Include="Temples\ckfinder\plugins\watermark\logo.gif" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\app.css" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\host.css" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\ai.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\avi.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\bmp.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\cs.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\default.icon.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\dll.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\doc.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\docx.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\exe.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\fla.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\gif.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\jpg.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\js.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\mdb.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\mp3.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\ogg.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\pdf.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\ppt.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\pptx.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\rdp.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\swf.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\swt.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\txt.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\vsd.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\xls.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\xlsx.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\xml.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\16\zip.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\ai.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\avi.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\cs.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\default.icon.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\dll.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\doc.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\docx.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\exe.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\fla.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\gif.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\jpg.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\js.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\mdb.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\mp3.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\ogg.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\pdf.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\ppt.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\pptx.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\rdp.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\swf.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\swt.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\txt.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\vsd.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\xls.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\xlsx.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\xml.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\images\icons\32\zip.png" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\skin.js" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\uipanel.css" />
+    <Content Include="Temples\ckfinder\skins\kama\app.css" />
+    <Content Include="Temples\ckfinder\skins\kama\host.css" />
+    <Content Include="Temples\ckfinder\skins\kama\images\ckffolder.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\ckffolderopened.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\ckfminus.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\ckfnothumb.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\ckfplus.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons.png" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\ai.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\avi.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\bmp.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\cs.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\default.icon.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\dll.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\doc.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\docx.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\exe.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\fla.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\gif.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\jpg.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\js.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\mdb.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\mp3.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\ogg.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\pdf.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\ppt.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\pptx.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\rdp.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\swf.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\swt.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\txt.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\vsd.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\xls.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\xlsx.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\xml.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\16\zip.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\ai.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\avi.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\bmp.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\cs.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\default.icon.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\dll.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\doc.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\docx.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\exe.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\fla.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\gif.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\jpg.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\js.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\mdb.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\mp3.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\ogg.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\ogg.png" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\pdf.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\ppt.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\pptx.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\rdp.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\swf.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\swt.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\txt.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\vsd.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\xls.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\xlsx.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\xml.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\icons\32\zip.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\loaders\16x16.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\loaders\32x32.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\spacer.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\sprites.png" />
+    <Content Include="Temples\ckfinder\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\add.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\clear_basket.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\delete.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\download.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\help.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\maximize.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\refresh.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\settings.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\images\toolbar\view.gif" />
+    <Content Include="Temples\ckfinder\skins\kama\richcombo.css" />
+    <Content Include="Temples\ckfinder\skins\kama\skin.js" />
+    <Content Include="Temples\ckfinder\skins\kama\uipanel.css" />
+    <Content Include="Temples\ckfinder\skins\v1\app.css" />
+    <Content Include="Temples\ckfinder\skins\v1\host.css" />
+    <Content Include="Temples\ckfinder\skins\v1\images\ckffolder.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\ckffolderopened.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\ckfminus.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\ckfnothumb.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\ckfplus.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\dialog_sides.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\dialog_sides.png" />
+    <Content Include="Temples\ckfinder\skins\v1\images\dialog_sides_rtl.png" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons.png" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\ai.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\avi.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\bmp.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\cs.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\default.icon.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\dll.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\doc.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\docx.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\exe.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\fla.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\gif.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\jpg.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\js.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\mdb.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\mp3.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\pdf.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\ppt.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\pptx.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\rdp.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\swf.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\swt.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\txt.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\vsd.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\xls.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\xlsx.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\xml.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\16\zip.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\ai.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\avi.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\bmp.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\cs.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\default.icon.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\dll.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\doc.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\docx.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\exe.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\fla.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\gif.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\jpg.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\js.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\mdb.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\mp3.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\pdf.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\ppt.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\pptx.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\rdp.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\swf.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\swt.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\txt.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\vsd.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\xls.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\xlsx.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\xml.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\icons\32\zip.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\loaders\16x16.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\loaders\32x32.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\spacer.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\sprites.png" />
+    <Content Include="Temples\ckfinder\skins\v1\images\sprites_ie6.png" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\add.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\clear_basket.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\delete.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\download.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\help.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\maximize.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\refresh.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\settings.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar\view.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\images\toolbar_start.gif" />
+    <Content Include="Temples\ckfinder\skins\v1\richcombo.css" />
+    <Content Include="Temples\ckfinder\skins\v1\skin.js" />
+    <Content Include="Temples\ckfinder\skins\v1\uipanel.css" />
+    <Content Include="Temples\ckfinder\translations.txt" />
+    <Content Include="Temples\images\phượt.jpg" />
+    <Content Include="Temples\images\queanh.jpg" />
+    <Content Include="Temples\images\queem.jpg" />
+    <Content Include="Temples\images\quennhau.jpg" />
+    <Content Include="Temples\images\quà.jpg" />
+    <Content Include="Temples\images\sinhnhat19.jpg" />
+    <Content Include="Temples\images\sinhnhat20.jpg" />
+    <Content Include="Temples\images\tietkiem.jpg" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-01.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-02.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-03.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-04.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-05.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-06.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-07.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-08.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-09.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-10.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-11.png" />
+    <Content Include="Temples\_thumbs\Images\Project\1100x834-12.png" />
+    <Content Include="Temples\_thumbs\Images\Project\CIC01.jpg" />
+    <Content Include="Temples\_thumbs\Images\Project\MTC-17-002-PHOTO-001.png" />
+    <Content Include="Web.config" />
+    <Content Include="Views\Home\View1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NhatKyAnhVaEmContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tbl01_KyNiem.cs" />
+    <Compile Include="tbl02_User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Temples\ckeditor\CHANGES.md" />
+    <Content Include="Temples\ckeditor\LICENSE.md" />
+    <Content Include="Temples\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="Temples\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Temples\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Temples\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Temples\ckeditor\plugins\wsc\README.md" />
+    <Content Include="Temples\ckeditor\README.md" />
+    <Content Include="Temples\ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="Temples\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="Temples\ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="Temples\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
+    <Content Include="Temples\ckeditor\skins\moono-lisa\readme.md" />
+    <Content Include="Temples\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Temples\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Temples\ckfinder\userfiles\.htaccess" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Delete.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Temples\images\News\" />
+    <Folder Include="Temples\images\Project\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55672</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55672/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<NhatKyAnhVaEm.tbl01_KyNiem>
+ 
+
+@{
+    ViewBag.Title = "Kỉ Niệm";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+
+}
+
+<h2 class="text-center">KỶ NIỆM</h2>
+
+<div class="section-top-border">
+    <div class="row gallery-item">
+@foreach (var item in Model)
+{
+        <div class="col-md-4">
+            <a href="@Html.DisplayFor(modelItem => item.HinhAnh)" class="img-pop-up">
+                <div class="single-gallery-image" style="background: url(@Html.DisplayFor(modelItem => item.HinhAnh));"></div>
+            </a>
+        </div>
+}
+    </div>
+
+</div>
+
+
+

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<NhatKyAnhVaEm.tbl01_KyNiem>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<h2>Index</h2>
+<link href="~/Content/style.css" rel="stylesheet" />
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href='@Url.Action("Create","Home")' class="btn btn-lg maureu btn-add"><i class="glyphicon glyphicon-plus"></i></a>
+
+</p>
+<table class="table table-hover table-responsive table-bordered">
+    <tr class="btn-info">
+        <th>
+            <span class="text-info">Tên Kỉ Niệm</span>
+        </th>
+        <th>
+            <span class="text-info">Thời Gian</span>
+        </th>
+        <th>
+            <span class="text-info">Hình Ảnh</span>
+        </th>
+        <th>
+            <span class="text-info">Nội Dung</span>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenKiNiem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThoiGian)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HinhAnh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoiDung)
+            </td>
+            <td>
+                <a href='@Url.Action("Edit", null, new { id=item.ID_KyNiem})' class="btn btn-sm mauvang btn-update"><i class="glyphicon glyphicon-pencil"></i></a>
+                <a href='@Url.Action("Delete",null, new { id=item.ID_KyNiem})' class="btn btn-sm maudo btn-delete"><i class="glyphicon glyphicon-trash"></i></a>
+                <a href='@Url.Action("Details",null, new { id=item.ID_KyNiem})' class="btn btn-sm maureu btn-detail"><i class="glyphicon glyphicon-cog"></i></a>
+            </td>
+        </tr>
+    }
+
+</table>
